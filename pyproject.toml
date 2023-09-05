@@ -4,9 +4,8 @@ requires = [
 ]
 build-backend = "hatchling.build"
 
-
 [project]
-name = "scope-acquisition"
+name = "tds-scope"
 authors = [
     { name = "Luis Antonio Obis Aparicio", email = "luis.antonio.obis@gmail.com" },
 ]
@@ -17,7 +16,9 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-version = "0.0.1"
+dynamic = [
+    "version",
+]
 dependencies = [
     "pyvisa",
     "pyvisa-py",
@@ -39,6 +40,9 @@ dev = [
 ]
 
 [project.urls]
-"Download" = "https://github.com/lobis/hvps/releases"
-"Homepage" = "https://github.com/lobis/hvps"
-"Bug Tracker" = "https://github.com/lobis/hvps/issues"
+"Download" = "https://github.com/lobis/tds-scope/releases"
+"Homepage" = "https://github.com/lobis/tds-scope"
+"Bug Tracker" = "https://github.com/lobis/tds-scope/issues"
+
+[tool.hatch.version]
+path = "src/tds/version.py"
