@@ -36,4 +36,4 @@ jobs:
         run: python -m pytest
 
       - name: Run from cli
-        run: python -m tds-scope --version
+        run: python -m tds --version

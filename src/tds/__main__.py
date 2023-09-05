@@ -2,10 +2,17 @@ import pyvisa
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+import argparse
+from tds import __version__ as version
 
 
 def main():
-    rm = pyvisa.ResourceManager("")
+    parser = argparse.ArgumentParser(description="HVPS control")
+    parser.add_argument("--version", action="version", version=version)
+
+    args = parser.parse_args()
+
+    rm = pyvisa.ResourceManager("@py")
     print(f"Printing resources: {rm.list_resources()}")
 
     scope = rm.open_resource(

@@ -5,7 +5,7 @@ requires = [
 build-backend = "hatchling.build"
 
 [project]
-name = "tds-scope"
+name = "tds"
 authors = [
     { name = "Luis Antonio Obis Aparicio", email = "luis.antonio.obis@gmail.com" },
 ]
