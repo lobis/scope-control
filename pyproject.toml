@@ -43,3 +43,6 @@ test = [
 
 [tool.hatch.version]
 path = "src/tds/version.py"
+
+[project.scripts]
+tds = "tds.__main__:main"
