@@ -1,0 +1,44 @@
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "scope-acquisition"
+authors = [
+    { name = "Luis Antonio Obis Aparicio", email = "luis.antonio.obis@gmail.com" },
+]
+description = "An unofficial Python package 🐍📦 to interface with CAEN high voltage power supplies"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+version = "0.0.1"
+dependencies = [
+    "pyvisa",
+    "pyvisa-py",
+    "uproot",
+    "numpy",
+    "matplotlib",
+    "psutil",
+    "zeroconf",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+dev = [
+    "pytest",
+    "pre-commit",
+]
+
+[project.urls]
+"Download" = "https://github.com/lobis/hvps/releases"
+"Homepage" = "https://github.com/lobis/hvps"
+"Bug Tracker" = "https://github.com/lobis/hvps/issues"
