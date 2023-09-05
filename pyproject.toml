@@ -20,6 +20,7 @@ dynamic = [
     "version",
 ]
 dependencies = [
+    "argparse",
     "pyvisa",
     "pyvisa-py",
     "uproot",
@@ -31,10 +32,6 @@ dependencies = [
 
 [project.optional-dependencies]
 test = [
-    "pytest",
-]
-
-dev = [
     "pytest",
     "pre-commit",
 ]
