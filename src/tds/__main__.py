@@ -1,13 +1,13 @@
 import pyvisa
 import numpy as np
 import matplotlib.pyplot as plt
-import time
 import argparse
 from tds import __version__ as version
 from tds import Scope
 
 
 # https://download.tek.com/manual/077011000web_0.pdf
+
 
 def get_resources():
     rm = pyvisa.ResourceManager("@py")
@@ -125,8 +125,9 @@ def main():
     print(f"Waveform data length: {len(waveform_data)}")
 
     expected_bytes = buffer_length * sequence_count
-    assert len(
-        waveform_data) == expected_bytes, f"Buffer length mismatch: {len(waveform_data)} != {expected_bytes}"
+    assert (
+        len(waveform_data) == expected_bytes
+    ), f"Buffer length mismatch: {len(waveform_data)} != {expected_bytes}"
 
     # split it into the individual waveforms
     waveform_data = waveform_data.reshape(sequence_count, buffer_length)
