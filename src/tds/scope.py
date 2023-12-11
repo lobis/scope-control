@@ -1,14 +1,11 @@
 import pyvisa
-import numpy as np
 import time
 
 
 class Scope:
     def __init__(self, ip_address: str):
         self.rm = pyvisa.ResourceManager("@py")
-        self.scope = self.rm.open_resource(
-            f"TCPIP::{ip_address}::INSTR"
-        )
+        self.scope = self.rm.open_resource(f"TCPIP::{ip_address}::INSTR")
         self.scope.read_termination = "\n"
         self.scope.write_termination = "\n"
 
